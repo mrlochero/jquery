@@ -11,39 +11,9 @@
 <center>
      <br>
      <br>
-               <h1> các bài tập Jquery cơ bản  </h1>
-    <br>
-     <div>
-    <H2> BÀI 1 : Cách ẩn hiện nội dung khi click vào button trong jQuery </H2>
-
-        <div>
-            <lable><span>màu xanh lá</span><input class="selector__radio" type="radio" name="colorRadio" value="green"></lable>
-            <lable><span>màu vàng</span><input class="selector__radio" type="radio" name="colorRadio" value="yellow"></lable>
-            <lable><span>màu đỏ</span><input class="selector__radio" type="radio" name="colorRadio" value="red"></lable>
-        </div>
-
-        <div class="block__color">
-            <div class="green box"> Bạn đã chọn màu xanh lá  </div>
-            <div class="yellow box"> Bạn đã chọn màu vàng    </div>
-            <div class="red box"> Bạn đã chọn màu đỏ         </div>
-        </div>
-
-    <script>
-        $(document).ready(function (){
-            $('.box').hide();
-            $('input[type="radio"]').click(function (){
-                var inputValue = $(this).attr("value");
-                var targetBox = $("." + inputValue);
-                $('.box').hide();
-                $(targetBox).show();
-            })
-        })
-    </script>
-      </div>
-    <hr>
-     <div>
-         <br>
-         <H2> bài 2 : Tạo máy tính bằng Jquery  </H2>
+  
+   
+         <H2>  Tạo máy tính bằng Jquery  </H2>
 
            <div class="calculator">
                <input type="text" class="hover__item box__calculation" value="">
