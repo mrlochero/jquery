@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tạo tabs trong jQuery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>
+    <style type="text/css">
+        .tab-wrapper{
+            width: 500px;
+            margin: 10px auto;
+            border: solid 1px #acacac;
+        }
+        .tab-wrapper ul{
+            overflow: hidden;
+            background: #aee655;
+            margin: 0px;
+            padding: 0px;
+        }
+        .tab-wrapper ul li{
+            float: left;
+            list-style: none;
+            padding: 10px 20px;
+            background: #348ec9;
+            border-radius: 10px 10px 0px 0px;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        .tab-wrapper ul li.active{
+            background: #Fff;
+        }
+        .tab-wrapper ul li.active a{
+            color: blue;
+        }
+        .tab-wrapper ul li a{
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .tab-content{
+            padding: 20px;
+        }
+        .tab-item{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="tab-wrapper">
+    <ul class="tab">
+        <li>
+            <a href="#tab-main-info">Home</a>
+        </li>
+        <li>
+            <a href="#tab-image">Page</a>
+        </li>
+        <li>
+            <a href="#tab-seo">content</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-item" id="tab-main-info">
+            Home
+        </div>
+        <div class="tab-item" id="tab-image">
+            Page
+        </div>
+        <div class="tab-item" id="tab-seo">
+            Content
+        </div>
+    </div>
+</div>
+</body>
+
+<script language="javascript">
+
+    $(document).ready(function()
+    {
+        // Hàm active tab nào đó
+        function activeTab(obj)
+        {
+            // Xóa class active tất cả các tab
+            $('.tab-wrapper ul li').removeClass('active');
+
+            // Thêm class active vòa tab đang click
+            $(obj).addClass('active');
+
+            // Lấy href của tab để show content tương ứng
+            var id = $(obj).find('a').attr('href');
+
+            // Ẩn hết nội dung các tab đang hiển thị
+            $('.tab-item').hide();
+
+            // Hiển thị nội dung của tab hiện tại
+            $(id) .show();
+        }
+
+        // Sự kiện click đổi tab
+        $('.tab li').click(function(){
+            activeTab(this);
+            return false;
+        });
+
+        // Active tab đầu tiên khi trang web được chạy
+        activeTab($('.tab li:first-child'));
+    });
+</script>
+
+
+</html>

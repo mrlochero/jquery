@@ -1,0 +1,6 @@
+-  jquery là một thư viện JS dùng để thao tác với các thành phần trong DOM html. tính năng nhanh , gọn ,nhẹ dễ sử dụng tối ưu hóa code.
+- khác nhau JS và Jquery : js là ngôn ngữ lập trình trong khi jquery là thư viện viết bằng ngôn ngữ js.
+- jQuery là thư viện dành cho client scripting
+- Chúng ta có thể có nhiều hàm document.ready() trên cùng một trang không? CÓ
+- Sự khác biệt giữa .js và .min.js là gì? : file .js sẽ đầy đủ tính năng nên sẽ nặng hơn file .min.js
+- Sự khác nhau giữa .height(), .innerHeight() và .outerHeight() :
